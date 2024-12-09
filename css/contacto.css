@@ -1,0 +1,165 @@
+/* Estilos generales */
+body {
+    font-family: 'Hachi Maru Pop';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.banner {
+    position: relative;
+    background: url('../img/fondo2.jpg') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Capa oscura sobre la imagen */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Color oscuro con opacidad */
+    z-index: 1; /* Asegura que la capa esté sobre la imagen, pero bajo el texto */
+}
+
+/* Ajustar el contenido del banner para que esté sobre la capa oscura */
+.banner h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    z-index: 2; /* Asegura que el texto esté sobre la capa oscura */
+}
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 10%;
+    gap: 20px;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.whatsapp-icon img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-icon:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+/* Contenedores (formulario e información) */
+.form-container, .info-container, .tour-virtual-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de recorrido virtual ajustado al ancho del footer */
+.tour-virtual-container {
+    width: 100%;                /* El ancho es 100% dentro del contenedor padre */
+    max-width: 1200px;          /* Limita el ancho máximo */
+    margin: 0 auto;             /* Centra el contenedor */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tour-virtual-container iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Títulos */
+h2 {
+    color: black;
+}
+
+.highlight {
+    color: #ff5f07;
+}
+
+.divider {
+    border: 1px solid #206ed9;
+    margin: 10px 0;
+    width: 50%;
+}
+
+/* Formulario */
+.form-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.btn-submit {
+    background: #007495;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: black;
+}
+
+/* Información del hotel */
+ul {
+    list-style-type: none;
+    padding: 0;
+    color: #555;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+strong {
+    color: #333;
+}

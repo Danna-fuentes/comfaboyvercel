@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMFABOY</title>
+    <link rel="stylesheet" href="../css/registro.css">
+</head>
+<body>
+    <div class="container">
+        <img src="../img/logocomfaboy.png" alt="Logo">
+        <form>
+            <!-- Fila 1: Nombres -->
+            <div class="form-group">
+                <label for="primer-nombre">Primer Nombre:</label>
+                <input type="text" id="primer-nombre" name="primer-nombre" placeholder="Digite su primer nombre">
+            </div>
+            <div class="form-group">
+                <label for="segundo-nombre">Segundo Nombre:</label>
+                <input type="text" id="segundo-nombre" name="segundo-nombre" placeholder="Digite su segundo nombre">
+            </div>
+    
+            <!-- Fila 2: Apellidos -->
+            <div class="form-group">
+                <label for="primer-apellido">Primer Apellido:</label>
+                <input type="text" id="primer-apellido" name="primer-apellido" placeholder="Digite su primer apellido">
+            </div>
+            <div class="form-group">
+                <label for="segundo-apellido">Segundo Apellido:</label>
+                <input type="text" id="segundo-apellido" name="segundo-apellido" placeholder="Digite su segundo apellido">
+            </div>
+    
+            <!-- Fila 3: Documento -->
+            <div class="form-group">
+                <label for="tipo-documento">Tipo Documento:</label>
+                <select id="tipo-documento" name="tipo-documento">
+                    <option value="cc">Cédula de Ciudadanía</option>
+                    <option value="ce">Cédula de Extranjería</option>
+                    <option value="ps">Pasaporte</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numero-documento">Número de documento:</label>
+                <input type="text" id="numero-documento" name="numero-documento" placeholder="Digite su número de documento">
+            </div>
+    
+            <!-- Fila 4: Teléfono y Fecha -->
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" placeholder="Digite su número de teléfono">
+            </div>
+            <div class="form-group">
+                <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+            </div>
+    
+            <!-- Fila 5: Correo electrónico -->
+            <div class="form-group full-width">
+                <label for="correo-electronico">Correo electrónico:</label>
+                <input type="email" id="correo-electronico" name="correo-electronico" placeholder="Digite su correo electrónico">
+            </div>
+    
+            <!-- Fila 6: Usuario y Contraseña alineados -->
+            <div class="form-group">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario">
+            </div>
+            <div class="form-group">
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña">
+            </div>
+    
+            <!-- Botón -->
+            <button type="submit">REGISTRARSE</button>
+        </form>
+    </div>
+</body>
+</html>

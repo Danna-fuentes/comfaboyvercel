@@ -1,0 +1,141 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondo_inicio.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.4; /* Ajusta este valor para cambiar el nivel de oscuridad */
+    z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.container {
+    text-align: center;
+    padding: 15px; /* Ancho del cuadro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-width: 600px; 
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espacio entre columnas */
+}
+
+.container img {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-left: 220px;
+    
+}
+
+.container h2 {
+    margin-bottom: 10px;
+    color: black;
+    font-size: 18px;
+    width: 100%;
+}
+
+.container form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espacio entre campos de formulario */
+    width: 100%;
+}
+
+.container label {
+    display: block;
+    color: black;
+    font-size: 12px;
+}
+
+.container .form-group {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 15px); /* Ancho de cada columna */
+}
+
+.container input, .container select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.container button {
+    padding: 6px 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 12px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.container button:hover {
+    background-color: #ff4b2b;
+}
+
+a{
+	color: white;
+    text-decoration: none;
+}
+
+/* Acompañantes (Niños y Adultos) */
+.acompanantes-inline {
+    
+    gap: 20px; /* Espacio horizontal entre los campos */
+    justify-content: space-between; /* Asegura que ambos campos se alineen correctamente */
+    align-items: flex-start; /* Alinea los campos de texto */
+}
+
+input[type="number"] {
+    width: 100%; /* Hace que los campos ocupen todo el ancho disponible */
+    padding: 8px; /* Añade espacio interno dentro del campo */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total del input */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.detalles{
+    display:none;
+}
+
+/* Pregunta de afiliado, ajustando el espacio entre Sí y No */
+.opciones-inline {
+    display: flex;
+    gap: -50px; /* Reduce la separación entre Sí y No */
+    justify-content: center; /* Centra ambos elementos */
+    align-items: center; /* Alinea los radios y las etiquetas */
+}
+
+input[type="radio"] {
+    margin-right: 5px; /* Espacio pequeño entre el radio y la etiqueta */
+}

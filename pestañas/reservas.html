@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMFABOY</title>
+    <link rel="stylesheet" href="../css/reservas.css">
+    <link rel="stylesheet" href="../templates/header.html">
+    <!-- archivo de JavaScript -->
+    <script defer src="../js/reservas.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="../img/logocomfaboy.png" alt="Comfaboy Logo">
+        <h2>RESERVAS</h2>
+        <form action="https://comfaboy/registro" method="POST">
+            <div class="form-group">
+                <label for="fecha-inicio">CHECK-IN:</label>
+                <input type="date" id="fecha-inicio" name="fecha-inicio" required>
+            </div>
+            <div class="form-group">
+                <label for="fecha-fin">CHECK-OUT:</label>
+                <input type="date" id="fecha-fin" name="fecha-fin" required>
+            </div>
+
+            <div class="form-group">
+                <label for="acompañantes">Cantidad Acompañantes:</label>
+                <input type="number" id="acompañantes" name="acompañantes" placeholder="Digite la cantidad de acompañantes" required>
+            </div>
+            
+            <!-- Inicio submenú cantidad de acompañantes -->
+            <div class="detalles" id="detalle-acompanantes">
+                <div class="acompanantes-inline">
+                    <label for="ninos">Niños:</label>
+                    <input type="number" id="ninos" name="ninos" placeholder="Cantidad de niños" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="adultos">Adultos:</label>
+                    <input type="number" id="adultos" name="adultos" placeholder="Cantidad de adultos" min="0">
+                </div>
+            </div>
+            <!-- fin submenú cantidad de acompañantes -->
+
+            <!-- Inicio pregunta afiliado -->
+            <div class="form-group">
+                <label>¿Afiliado?</label>
+                <div class="opciones-inline">
+                <input type="radio" id="afiliado-si" name="afiliado" value="si">
+                <label for="afiliado-si">Sí</label>
+                <input type="radio" id="afiliado-no" name="afiliado" value="no">
+                <label for="afiliado-no">No</label>
+            </div>
+        </div>
+        <div id="categorias" style="display: none;">
+            <label>¿En qué categoría se encuentra?</label>
+            <div class="opciones-inline">
+                <input type="radio" id="categoria-a" name="categoria" value="a">
+                <label for="categoria-a">A</label>
+                <input type="radio" id="categoria-b" name="categoria" value="b">
+                <label for="categoria-b">B</label>
+                <input type="radio" id="categoria-c" name="categoria" value="c">
+                <label for="categoria-c">C</label>
+                <input type="radio" id="categoria-d" name="categoria" value="d">
+                <label for="categoria-d">D</label>
+            </div>
+        </div>
+            <!-- Fin del menú de categorías -->
+
+            <!-- Inicio pregunta mascotas -->
+            <div class="form-group">
+                <label>¿Viene acompañado de algún canino?</label>
+            <div class="opciones-inline">
+                <input type="radio" id="mascota-si" name="mascota" value="si">
+                <label for="mascota-si">Sí</label>
+                <input type="radio" id="mascota-no" name="mascota" value="no">
+                <label for="mascota-no">No</label>
+            </div>
+</div>
+
+<!-- Este es el contenedor del campo para la cantidad de caninos -->
+<div id="cantidad-caninos-container" style="display: none;">
+    <div class="form-group">
+        <label for="cantidad-caninos">¿Cuántos caninos?:</label>
+        <input type="number" id="cantidad-caninos" name="cantidad-caninos" placeholder="Cantidad de mascotas" min="0">
+    </div>
+</div>
+<!-- Fin pregunta mascotas -->
+
+
+            <button type="submit">RESERVAR</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMFABOY</title>
+    
+    <link rel="stylesheet" href="../css/inicioSesion.css">
+</head>
+<body>
+    <div class="container">
+        <img src="../img/logocomfaboy.png" alt="Logo">
+        <form action="../procesos/procesarLogin.php" method="POST">
+            <select name="tipo">
+                <option value="usuario">Usuario</option>
+                <option value="administrador">Administrador</option>
+            </select>
+            <input type="email" name="email" placeholder="E-MAIL" required>
+            <input type="password" name="password" placeholder="PASSWORD" required>
+            <button type="submit">INGRESAR</button>
+            <button type="submit"><a href="registro.html">REGISTRAR</a></button>
+        </form>
+    </div>
+</body>
+</html>

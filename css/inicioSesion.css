@@ -1,0 +1,84 @@
+/* Aplicar la fuente 'Hachi Maru Pop' en el body y agregar un respaldo */
+body {
+    font-family: 'Hachi Maru Pop', sans-serif;  /* Asegúrate de que la fuente sea la correcta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+/* Fondo con opacidad */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondo_inicio.jpg '); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.4; /* Ajusta este valor según la opacidad deseada */
+    z-index: -1; /* Coloca la imagen de fondo detrás del contenido */
+}
+
+/* Contenedor de la forma de inicio de sesión */
+.container {
+    text-align: center;
+  /* Fondo semi-transparente para mejorar la legibilidad */
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Estilo para el título o logo */
+.container img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los encabezados */
+.container h2 {
+    margin-bottom: 20px;
+    color: black;
+    font-family: 'Hachi Maru Pop', sans-serif;  /* Asegúrate de aplicar la fuente aquí también */
+}
+
+/* Estilos de los campos del formulario */
+.container select,
+.container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Hachi Maru Pop', sans-serif; /* Aplica la fuente a los campos también */
+}
+
+/* Estilo de los botones */
+.container button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Hachi Maru Pop', sans-serif; /* Asegúrate de que los botones también tengan la fuente */
+}
+
+.container button:hover {
+    background-color: #ff4b2b;
+}
+
+/* Enlaces */
+a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Hachi Maru Pop', sans-serif; /* Aplica la fuente al enlace */
+}
